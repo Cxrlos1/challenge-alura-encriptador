@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-primario: #0A3871;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+header img {
+    width: 120px;
+    height: 48px;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+body {
+    background-color: #F3F5FC;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85dvh;
+    padding-top: 80px;
+    padding-left: 80px;
+}
+
+.form__input {
+    width: 100%;
+    max-width: 680px;
+    height: 64dvh;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-primario);
+    font-family: "Inter", sans-serif;
+    resize: none;
+    overflow: auto;
+}
+
+::placeholder {
+    color: var(--color-primario);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.container {
+    padding-bottom: 72px;
+}
+
+.alert__msj {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 16px;
+    color: #495057;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+.form__encriptar {
+    background: #0A3871;
+    color: #FFFFFF;
+    width: 328px;
+    padding: 24px;
+    border: #0A3871 solid 1px;
+    border-radius: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form__desincriptar {
+    background: #D8DFE8;
+    color: var(--color-primario);
+    width: 328px;
+    padding: 24px;
+    border: #0A3871 solid 1px;
+    border-radius: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form__bottom {
+    display: flex;
+    gap: 24px;
+}
+
+.result {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 88dvh;
+    border-radius: 32px;
+    width: 100%;
+    max-width: 400px
+}
+
+.result__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    width: 336px;
+}
+
+.result__tittle {
+    font-family: "Inter", sans-serif;
+    color: #343A40;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.result__text {
+    font-family: "Inter", sans-serif;
+    color: #495057;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.form__copiar {
+    background: transparent;
+    color: var(--color-primario);
+    width: 328px;
+    padding: 24px;
+    border: #0A3871 solid 1px;
+    border-radius: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.container__footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    background: #0A3871;
+    font-size: 0.75rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #D8DFE8;
+    align-items: center;
+}
+
+.link__gl {
+    color: #D8DFE8;
+    text-decoration: none;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main{
+        flex-direction: column;
+    }
+
+    .form__input {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form__section {
+        padding-left: 0;
+    }
+
+    .result__img {
+        display: none;
+    }
+
+    .loader {
+        margin-top: 5%;
+    }
+
+    .result {
+        height: auto;
+        max-width: 680px;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .result__container {
+        height: auto;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .result__container {
+        width: auto;
+        height: auto;
+        padding: 32px;
+    }
+
+    .form__bottom {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .container {
+        width: 328px;
+    }
+
+    .form__input {
+        height: 60%;
+        max-width: 90%;
+    }
+
+    .result {
+        max-width: 95%;
+    }
+
+    .loader {
+        margin-top: 5%;
+    }
+
+
+    .logo_alura {
+        padding-top: 24px;
+        padding-left: 16px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .container__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+
+
+.loader {
+    width: 120px;
+    height: 20px;
+    -webkit-mask:linear-gradient(90deg,#000 70%,#0000 0) 0/20%;
+    background:
+     linear-gradient(#000 0 0) 0/0% no-repeat
+     #ddd;
+    animation: l4 2s infinite steps(6);
+  }
+  @keyframes l4 {
+      100% {background-size:120%}
+  }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/img/Logo.png" alt="logo de Alura" class="logo_alura">
+    </header>
+    <main>
+        <form class="form__section">
+            <textarea class="form__input" name="mensaje" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="container">
+                <div class="btn__container">
+                        <div class="alert__msj"><img src="./assets/img/alerta-icono.png" alt="icono de alerta">
+                            <span>Solo letras minúsculas y sin acentos</span>
+                        </div>
+                </div>
+                <div class="form__bottom">
+                    <input class="form__encriptar" type="submit" value="Encriptar">
+                    <input class="form__desincriptar" type="submit" value="Desincriptar"> 
+                </div>
+            </div>
+        </form>
+        <aside class="result">
+            <img src="./assets/img/Muñeco.png" alt="muñeco" class="result__img">
+            <div class="result__container">
+                <div class="loader hidden"></div>
+                <h3 class="result__tittle">Ningún mensaje fue encontrado</h3>
+                <p class="result__text">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="form__copiar hidden">Copiar</button>
+            </div>
+        </aside>
+    </main>
+    <footer class="container__footer">
+        <p>DESAFIO ALURA</p>
+        <p>DESARROLLADOR CARLOS CRUZ</p>
+        <div class="container__link">
+            <a class="link__gl" href="https://github.com/Cxrlos1">
+                <img src="./assets/img/github.png" alt="icono__github"></a>
+            <a class="link__gl" href="https://www.linkedin.com/in/carlos-cruzz">
+                <img src="./assets/img/linkedin.png" alt="icono__linkedin"></a>
+        </div>
+    </footer>
+    <script src="./encriptador.js"></script>
+</body>
+</html>
